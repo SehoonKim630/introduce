@@ -24,6 +24,22 @@
 					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
 				});
 			});
+			$("#modal2-close").click(function() {
+				$(".youtube-contents").each(function(){
+					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+				});
+			});
+			$("#modal3-close").click(function() {
+				$(".youtube-contents").each(function(){
+					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+				});
+			});
+			$("#modal4-close").click(function() {
+				$(".youtube-contents").each(function(){
+					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+				});
+			});
+			
 			$("#portfolioModal1").click(function() {
 				$(".youtube-contents").each(function(){
 					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
@@ -321,7 +337,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-header border-0"><button id="modal2-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -360,7 +376,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-header border-0"><button id="modal3-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -395,7 +411,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-header border-0"><button id="modal4-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
