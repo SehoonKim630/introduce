@@ -20,11 +20,8 @@
 	<script>
 		$(document).ready(function() {
 			$("#modal1-close").click(function() {
-				//alert("test");
-				$(".youtube-contents")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
 				$(".youtube-contents").each(function(){
-					//this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-					$("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
 				});
 			});
 		});
@@ -320,7 +317,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/Mobile.png" alt="..." /> -->
 				    <div class="youtube-wrap">
-				    	<iframe src="https://www.youtube.com/embed/uIo1W_ETnyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed/uIo1W_ETnyE?enablejspai=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				    </div>
 				    <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">
