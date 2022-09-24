@@ -15,7 +15,16 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-		<link href="css/youtube_layout.css" rel="stylesheet" />		
+	<link href="css/youtube_layout.css" rel="stylesheet" />
+	<script>
+		$(document).ready(function() {
+			$(".btn-close").click(function() {
+				$(‘.youtube-contents’).each(function(){
+					this.contentWindow.postMessage(‘{“event”:”command”,”func”:”stopVideo”,”args”:””}’, ‘*’)
+				});
+			});
+		});
+	</script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -268,7 +277,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/VBA.png" alt="..." /> -->
 				    <div class="youtube-wrap">									
-				    	<iframe src="https://www.youtube.com/embed/klYbSsV4ypw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe class="youtube-contents" src="https://www.youtube.com/embed/klYbSsV4ypw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				    </div>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">
