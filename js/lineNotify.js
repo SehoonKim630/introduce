@@ -1,5 +1,5 @@
 $('#submitBtn').click(function(){
-  var name = $('#contactForm').find('input[name=name]').val();
+  var name = $('#contactForm').find('#name').val();
   var email = '';
   var phone = '';
   var message = '';
