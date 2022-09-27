@@ -19,12 +19,6 @@ $('#submitBtn').click(function(){
     contentType: 'aapplication/json; charset=utf-8',
     url:'https://www.martmanage86api.tk/yesmart-0.0.1-SNAPSHOT/line',
     data:jsonStr,
-    dataType:jsonp,
-    crossDomain: true,
-    headers: {
-      "accept": "application/json",
-      "Access-Control-Allow-Origin":"*"
-    },
     success: function(response){
       console.log(response)
     },
