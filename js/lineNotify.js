@@ -12,7 +12,7 @@ $('#submitBtn').click(function(){
   data.phone = $('#contactForm').find('#phone').val(), 
   data.message = $('#contactForm').find('#message').val()
   
-  var jsonStr = JSON.stringfy(data);
+  var jsonStr = JSON.stringify(data);
   
   $.ajax({
     type:'POST',
