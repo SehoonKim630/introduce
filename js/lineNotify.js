@@ -1,5 +1,5 @@
 $('#submitBtn').click(function(){
-  var name = $('#contactForm[name=name]').val();
+  var name = $('#contactForm').serialize();
   var email = '';
   var phone = '';
   var message = '';
