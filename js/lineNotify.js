@@ -6,18 +6,19 @@ $('#submitBtn').click(function(){
   
   alert(name + ', ' + email + ', ' + phone + ', ' + message);
   
-  var params = {
-    name : $('#contactForm').find('#name').val(),
-    email : $('#contactForm').find('#email').val(), 
-    phone : $('#contactForm').find('#phone').val(), 
-    message : $('#contactForm').find('#message').val()
-  }
+  var data = {}
+  data.name = $('#contactForm').find('#name').val(),
+  data.email = $('#contactForm').find('#email').val(), 
+  data.phone = $('#contactForm').find('#phone').val(), 
+  data.message = $('#contactForm').find('#message').val()
+  
+  var jsonStr = JSON.stringfy(data);
   
   $.ajax({
     type:'POST',
-    contentType: 'application/json',
+    contentType: 'aapplication/json; charset=utf-8',
     url:'https://www.martmanage86api.tk/yesmart-0.0.1-SNAPSHOT/line',
-    data:params,
+    data:jsonStr,
     success: function(response){
       console.log(response)
     },
