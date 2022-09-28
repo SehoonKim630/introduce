@@ -5,19 +5,23 @@ $('#submitBtn').click(function(){
   var message_DT = $('#contactForm').find('#message').val();
 
   if(name_DT == '') {
-	alert("name_DT를 입력해 주세요.");
+	alert("お名前を入力してください。");
+	$('#contactForm').find('#name').focus();
 	return false;
   }
   else if(email_DT == '') {
-	alert("email_DT를 입력해 주세요.");
+	alert("メールを入力してください。");
+	$('#contactForm').find('#email').focus();
 	return false;
   }
   else if(phone_DT == '') {
-	alert("phone_DT를 입력해 주세요.");
+	alert("連絡先を入力してください。");
+	$('#contactForm').find('#phone').focus();
 	return false;
   }
   else if(message_DT == '') {
-	alert("message_DT를 입력해 주세요.");
+	alert("メッセージを入力してください。");
+	$('#contactForm').find('#message').focus();
 	return false;
   }
   else {
