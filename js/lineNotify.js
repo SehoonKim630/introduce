@@ -1,3 +1,8 @@
+function validEmailCheck(obj){
+    var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    return (obj.value.match(pattern)!=null);
+}
+
 $('#submitBtn').click(function(){
   var name_DT = $('#contactForm').find('#name').val();
   var email_DT = $('#contactForm').find('#email').val();
@@ -13,6 +18,11 @@ $('#submitBtn').click(function(){
 	alert("メールを入力してください。");
 	$('#contactForm').find('#email').focus();
 	return false;
+  }
+  else if(validEmailCheck(email_DT) == false) {
+	alert("正しいメールアドレスではありません。");
+	$('#contactForm').find('#email').value = '';
+	$('#contactForm').find('#email').focus();
   }
   else if(phone_DT == '') {
 	alert("連絡先を入力してください。");
