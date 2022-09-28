@@ -23,6 +23,7 @@ $('#submitBtn').click(function(){
 	alert("正しいメールアドレスではありません。");
 	$('#contactForm').find('#email').val('');
 	$('#contactForm').find('#email').focus();
+	return false;
   }
   else if(phone_DT == '') {
 	alert("連絡先を入力してください。");
@@ -55,6 +56,8 @@ $('#submitBtn').click(function(){
         //alert(xtr +":"+status+":"+error);
       }
     });
+
+	return false;
   }
 
 });
