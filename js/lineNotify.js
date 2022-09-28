@@ -21,7 +21,7 @@ $('#submitBtn').click(function(){
   }
   else if(validEmailCheck(email_DT) == false) {
 	alert("正しいメールアドレスではありません。");
-	$('#contactForm').find('#email').value = '';
+	$('#contactForm').find('#email').val('');
 	$('#contactForm').find('#email').focus();
   }
   else if(phone_DT == '') {
