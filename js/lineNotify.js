@@ -1,27 +1,30 @@
 
 $('#submitBtn').click(function(){
+
+	$('#sendMsg').modal('show');
+
   var name_DT = $('#contactForm').find('#name').val();
   var email_DT = $('#contactForm').find('#email').val();
   var phone_DT = $('#contactForm').find('#phone').val();
   var message_DT = $('#contactForm').find('#message').val();
 
   if(name_DT == '') {
-	alert("お名前を入力してください。");
+	$('#nameEmptyWarningMsg').modal('show');
 	$('#contactForm').find('#name').focus();
 	return false;
   }
   else if(email_DT == '') {
-	alert("メールを入力してください。");
+	$('#emailEmptyWarningMsg').modal('show');
 	$('#contactForm').find('#email').focus();
 	return false;
   }
   else if(phone_DT == '') {
-	alert("連絡先を入力してください。");
+	$('#phoneEmptyWarningMsg').modal('show');
 	$('#contactForm').find('#phone').focus();
 	return false;
   }
   else if(message_DT == '') {
-	alert("メッセージを入力してください。");
+	$('#messageEmptyWarningMsg').modal('show');
 	$('#contactForm').find('#message').focus();
 	return false;
   }
@@ -42,7 +45,7 @@ $('#submitBtn').click(function(){
 		$('#contactForm').each(function() {
 			this.reset();
 		});
-        alert("送信しました。");
+       $('#sendMsg').modal('show');
       },
       error : function(xtr, status, error){
         alert("エラーが発生しました。")
@@ -53,4 +56,12 @@ $('#submitBtn').click(function(){
 	return false;
   }
 
+});
+
+$('#sendMsgCloseBtn').click(function() {
+	$('#sendMsg').modal('hide')
+});
+
+$('.msgCloseBtn').click(function() {
+	$('.warning').modal('hide')
 });

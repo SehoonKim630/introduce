@@ -16,53 +16,9 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-	<link href="css/youtube_layout.css" rel="stylesheet" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#modal1-close").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			$("#modal2-close").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			$("#modal3-close").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			$("#modal4-close").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			
-			$("#portfolioModal1").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			$("#portfolioModal2").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			$("#portfolioModal3").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-			$("#portfolioModal4").click(function() {
-				$(".youtube-contents").each(function(){
-					this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-				});
-			});
-		});
-	</script>
+		 <!-- Youtube layout CSS -->
+		 <link href="css/youtube_layout.css" rel="stylesheet" />
+		 <link href="css/dialog.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -271,8 +227,8 @@
 	<!-- Portfolio Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button id="modal1-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div id="portflio1-content" class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -296,7 +252,7 @@
 					    엑셀 VBA로 가격표를 만드는 프로그램을 만들어 보았습니다.</p>
 									<p class="mb-4">プライスカードを作る時商品の基本情報も一緒にデータベースに登録して他のプロジェクト(「てウェブ」、「モバイル」、「ラズベリーパイ」)の中で活用するできるように具現しました。
 										가격표를 만드는 동시에 제품의 기본정보를 데이타베이스에 등록하고 웹, 모바일, 라즈베리파이 프로젝트에서 제품정보를 읽어오는데 필요한 데이타를 데이타베이스에 등록하도록 구현하였습니다.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-primary modal-close" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
@@ -310,8 +266,8 @@
         <!-- Portfolio Modal 2-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button id="modal2-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div id="portflio2-content" class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -335,7 +291,7 @@
 					    検品及び商品を確認するモバイルアプリケーションを作って見ました。</p>
 									<p class="mb-4">商品のバーコードをスキャンしたり入力したら商品の情報を読み込む方法を活用して作ったアプリケーションです。
 										바코드를 스캔하거나 입력하면 상품을 읽어오는 방식을 활용하여 만든 어플리케이션 입니다.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-primary modal-close" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
@@ -349,8 +305,8 @@
         <!-- Portfolio Modal 3-->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button id="modal3-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div id="portflio3-content" class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -373,7 +329,7 @@
 									<p class="mb-4">
 										ボータンをクリックしたりスマホでバーコードをスキャンしたら商品を検索できるように具現しました。
 										버튼을 클릭하거나 바코드 스캐너로 스캔하면 상품을 검색할 수 있도록 구현했습니다.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-primary modal-close" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
@@ -387,8 +343,8 @@
         <!-- Portfolio Modal 4-->
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button id="modal4-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div id="portflio4-content" class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -410,7 +366,7 @@
 									<p class="mb-4">機能1기능1 - モバイルで検品した結果を転送したら転送した検品結果をウェブで確認できるように具現しました。모바일앱에서 검품한 결과를 전송하면 전송한 검품 결과를 웹에서 볼 수 있도록 구현했습니다.</p>
 									<p class="mb-4">機能2기능2 - ラズベリーパイで作った冷凍庫管理データを全部0に初期化する機能を具現しました。라즈베리파이로 만든 냉동고 관리 데이타를 모두 0으로 초기화 하는 기능 (및 냉동고 현황을 확인하는) 을 구현했습니다.</p>
 									<p class="mb-4">機能3기능3 - 売上を記録したらグレープで売上を確認できるように具現しました。매상을 기록하면 그래프를 통해서 매상현활을 확인할 수 있도록 구현했습니다.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-primary modal-close" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
@@ -421,11 +377,95 @@
                 </div>
             </div>
         </div>
+
+		<!-- Name Empty Warning Dialog -->
+		<div id="nameEmptyWarningMsg" class="modal warning" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">お知らせ</h5>      				</div>
+					<div class="modal-body">
+						<p>お名前を入力してください。</p>
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-primary msgCloseBtn"　data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Email Empty Warning Dialog -->
+		<div id="emailEmptyWarningMsg" class="modal warning" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">お知らせ</h5>      				</div>
+					<div class="modal-body">
+						<p>メールを入力してください。</p>
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-primary msgCloseBtn"　data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Phone Empty Warning Dialog -->
+		<div id="phoneEmptyWarningMsg" class="modal warning" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">お知らせ</h5>      				</div>
+					<div class="modal-body">
+						<p>連絡先を入力してください。</p>
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-primary msgCloseBtn"　data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Message Empty Warning Dialog -->
+		<div id="messageEmptyWarningMsg" class="modal warning" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">お知らせ</h5>      				</div>
+					<div class="modal-body">
+						<p>メッセージを入力してください。</p>
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-primary msgCloseBtn"　data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Send Complete Dialog -->
+		<div id="sendMsg" class="modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">お知らせ</h5>      				</div>
+					<div class="modal-body">
+						<p>転送しました。</p>
+      				</div>
+      				<div class="modal-footer">
+        				<button id="sendMsgCloseBtn" type="button" class="btn btn-primary"　data-bs-dismiss="modal">確認</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-	<script src="js/lineNotify.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		 <script src="js/lineNotify.js"></script>
+		 <script src="js/youtube.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
