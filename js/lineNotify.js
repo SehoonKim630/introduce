@@ -1,8 +1,6 @@
 
 $('#submitBtn').click(function(){
 
-	$('#sendMsg').modal('show');
-
   var name_DT = $('#contactForm').find('#name').val();
   var email_DT = $('#contactForm').find('#email').val();
   var phone_DT = $('#contactForm').find('#phone').val();
